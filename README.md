@@ -82,7 +82,7 @@ This project demonstrates a complete end-to-end DevSecOps pipeline that automati
 
 ![grafana-node](screenshots/grafana-node-exporter.png.png)
 
-![grafana-blackbox](screenshots/grafana-blackbox-exporter)
+![grafana-blackbox](screenshots/grafana-blackbox-exporter.png)
 
 ---
 
@@ -94,7 +94,14 @@ This project demonstrates a complete end-to-end DevSecOps pipeline that automati
 
 ## 🌐 Application Output
 
-![website](screenshots/website)
+### Admin View
+![website](screenshots/website.png)
+
+### Manager Role
+![manager](screenshots/manger%20role%20website.png)
+
+### User Role
+![user](screenshots/role%20user%20website.png)
 
 ---
 
