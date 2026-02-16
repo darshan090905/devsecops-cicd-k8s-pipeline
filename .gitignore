@@ -1,0 +1,14 @@
+target/
+node_modules/
+*.log
+*.class
+*.jar
+*.war
+.env
+.idea
+.vscode
+*.iml
+.DS_Store
+trivy-*.html
+kubeconfig
+
