@@ -36,76 +36,76 @@ This project demonstrates a complete end-to-end DevSecOps pipeline that automati
 
 ## 🧪 Jenkins Pipeline
 
-![pipeline](screenshots/jenkins-pipeline-success.png)
+![pipeline](screenshots/jenkins-pipeline-success.png.png)
 
 ---
 
 ## 🔍 SonarQube Quality Gate
 
-![sonarqube](screenshots/sonarqube-dashboard.png)
+![sonarqube](screenshots/sonarqube-dashboard.png.png)
 
 ---
 
 ## 🔐 Security Scan (Trivy)
 
-![trivy](screenshots/trivyscanimage.png)
+![trivy](screenshots/trivyscanimage.png.png)
 
 ---
 
 ## 📦 Nexus Artifact Upload
 
-![nexus](screenshots/nexus-repository.png)
+![nexus](screenshots/nexus-artifact-uploaded.png.png)
 
 ---
 
 ## 🐳 Docker Image Build & Push
 
-![docker-build](screenshots/docker-build.png)
+![docker-build](screenshots/docker-build.png.png)
 
-![dockerhub](screenshots/dockerhub-image.png)
+![dockerhub](screenshots/dockerhub-image.png.png)
 
 ---
 
 ## ☸ Kubernetes Deployment
 
-![k8s-deploy](screenshots/kubernetes-deployment.png)
+![k8s-deploy](screenshots/kubernetes-deployment.png.png)
 
-![k8s-pods](screenshots/kubernetes-pods-running.png)
+![k8s-pods](screenshots/kubernetes-pods-running.png.png)
 
-![k8s-service](screenshots/kubernetes-service.png)
+![k8s-service](screenshots/kubernetes-service.png.png)
 
 ---
 
 ## 📊 Monitoring (Prometheus & Grafana)
 
-![prometheus](screenshots/prometheus-targets-up.png)
+![prometheus](screenshots/prometheus-targets-up.png.png)
 
-![grafana-node](screenshots/grafana-node-exporter.png)
+![grafana-node](screenshots/grafana-node-exporter.png.png)
 
-![grafana-blackbox](screenshots/grafana-blackbox-exporter.png)
+![grafana-blackbox](screenshots/grafana-blackbox-exporter)
 
 ---
 
 ## 📧 Email Notification
 
-![email](screenshots/jenkins-email-notification.png)
+![email](screenshots/jenkins-email-notification.png.png)
 
 ---
 
 ## 🌐 Application Output
 
-![website](screenshots/website.png)
+![website](screenshots/website)
 
 ---
 
 ## 🎯 Project Outcome
 
-✔ Automated CI/CD Pipeline  
-✔ Secure code quality checks  
-✔ Vulnerability scanning integrated  
-✔ Containerized deployment  
-✔ Kubernetes orchestration  
-✔ Real-time monitoring & alerting  
+✔ Automated CI/CD Pipeline
+✔ Secure code quality checks
+✔ Vulnerability scanning integrated
+✔ Containerized deployment
+✔ Kubernetes orchestration
+✔ Real-time monitoring & alerting
 
 ---
 
@@ -114,5 +114,3 @@ This project demonstrates a complete end-to-end DevSecOps pipeline that automati
 **Darshan S P**
 
 DevOps | Cloud | Cybersecurity Enthusiast
-
-
