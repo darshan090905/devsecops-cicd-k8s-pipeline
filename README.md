@@ -90,19 +90,6 @@ kubectl get svc -n webapps
 
 ---
 
-## 📁 Project Structure
-
-.
-├── app/ # Spring Boot Application
-├── docker/ # Dockerfile
-├── kubernetes/ # Deployment & Service YAML
-├── jenkins/ # Jenkins pipeline config
-├── sonar/ # Sonar properties
-├── screenshots/ # Project output screenshots
-├── Jenkinsfile
-└── README.md
----
-
 ## 🧪 How to Run (High Level)
 
 1. Create 4 AWS EC2 Instances
