@@ -1,58 +1,146 @@
-<<<<<<< HEAD
-# BoardgameListingWebApp
+# 🚀 DevSecOps CI/CD Pipeline with Kubernetes Monitoring
 
-## Description 
+A complete end-to-end DevSecOps project demonstrating Continuous Integration, Continuous Delivery, Security Scanning, Containerization, Kubernetes Deployment and Monitoring using industry tools.
 
-**Board Game Database Full-Stack Web Application.**
-This web application displays lists of board games and their reviews. While anyone can view the board game lists and reviews, they are required to log in to add/ edit the board games and their reviews. The 'users' have the authority to add board games to the list and add reviews, and the 'managers' have the authority to edit/ delete the reviews on top of the authorities of users.  
+This project builds a Java Spring Boot application (BoardGame App), scans it for vulnerabilities, containerizes it, pushes it to DockerHub, deploys into Kubernetes and monitors using Prometheus + Grafana + Blackbox Exporter.
 
-## Technologies
+---
 
-- Java
-- Spring Boot
-- Amazon Web Services(AWS) EC2
-- Thymeleaf
-- Thymeleaf Fragments
-- HTML5
-- CSS
-- JavaScript
-- Spring MVC
-- JDBC
-- H2 Database Engine (In-memory)
-- JUnit test framework
-- Spring Security
-- Twitter Bootstrap
-- Maven
+## 🧠 Project Architecture
 
-## Features
+Developer → GitHub → Jenkins Pipeline → SonarQube → Trivy → Nexus → DockerHub → Kubernetes → Prometheus → Grafana
 
-- Full-Stack Application
-- UI components created with Thymeleaf and styled with Twitter Bootstrap
-- Authentication and authorization using Spring Security
-  - Authentication by allowing the users to authenticate with a username and password
-  - Authorization by granting different permissions based on the roles (non-members, users, and managers)
-- Different roles (non-members, users, and managers) with varying levels of permissions
-  - Non-members only can see the boardgame lists and reviews
-  - Users can add board games and write reviews
-  - Managers can edit and delete the reviews
-- Deployed the application on AWS EC2
-- JUnit test framework for unit testing
-- Spring MVC best practices to segregate views, controllers, and database packages
-- JDBC for database connectivity and interaction
-- CRUD (Create, Read, Update, Delete) operations for managing data in the database
-- Schema.sql file to customize the schema and input initial data
-- Thymeleaf Fragments to reduce redundancy of repeating HTML elements (head, footer, navigation)
+---
 
-## How to Run
+## 🛠️ Tools & Technologies Used
 
-1. Clone the repository
-2. Open the project in your IDE of choice
-3. Run the application
-4. To use initial user data, use the following credentials.
-  - username: bugs    |     password: bunny (user role)
-  - username: daffy   |     password: duck  (manager role)
-5. You can also sign-up as a new user and customize your role to play with the application! 😊
-=======
-# devsecops-cicd-k8s-pipeline
-Production-Grade DevSecOps CI/CD Pipeline using Jenkins, Docker, Kubernetes, SonarQube, Trivy, Nexus and Prometheus-Grafana Monitoring
->>>>>>> 6629d6c9633789bafb5484d20eb0fbefa0cd650a
+| Category | Tools |
+|--------|------|
+| CI/CD | Jenkins |
+| Build Tool | Maven |
+| Code Quality | SonarQube |
+| Security Scan | Trivy |
+| Artifact Repo | Nexus |
+| Containerization | Docker |
+| Orchestration | Kubernetes (kubeadm cluster) |
+| Monitoring | Prometheus + Grafana |
+| Probing | Blackbox Exporter |
+| Metrics | Node Exporter |
+| Cloud | AWS EC2 |
+| Language | Java (Spring Boot) |
+
+---
+
+## ⚙️ Pipeline Stages
+
+1. Git Checkout
+2. Maven Compile & Test
+3. File System Vulnerability Scan (Trivy)
+4. SonarQube Code Analysis
+5. Quality Gate Validation
+6. Package Build
+7. Publish Artifact to Nexus
+8. Build Docker Image
+9. Docker Image Vulnerability Scan
+10. Push Image to DockerHub
+11. Deploy to Kubernetes
+12. Verify Deployment
+13. Email Notification
+
+---
+
+## 🔐 Security Implementations
+
+- Static Code Analysis using SonarQube
+- Dependency Vulnerability Scan using Trivy
+- Container Image Scan using Trivy
+- Kubernetes RBAC Authentication (Jenkins ServiceAccount)
+- Quality Gate enforcement before deployment
+
+---
+
+## ☸️ Kubernetes Deployment
+
+Application deployed as:
+- Deployment (2 replicas)
+- Service (LoadBalancer / NodePort)
+
+kubectl get pods -n webapps
+kubectl get svc -n webapps
+
+---
+
+## 📊 Monitoring Setup
+
+| Component | Purpose |
+|--------|------|
+| Node Exporter | Server metrics (CPU, RAM, Disk) |
+| Prometheus | Metrics collection |
+| Grafana | Visualization dashboards |
+| Blackbox Exporter | Endpoint uptime monitoring |
+| Jenkins Metrics | CI/CD monitoring |
+
+---
+
+## 📈 Grafana Dashboards
+
+- Node Exporter Full Dashboard
+- Blackbox HTTP Probe Dashboard
+- Jenkins Metrics Dashboard
+
+---
+
+## 📁 Project Structure
+
+.
+├── app/ # Spring Boot Application
+├── docker/ # Dockerfile
+├── kubernetes/ # Deployment & Service YAML
+├── jenkins/ # Jenkins pipeline config
+├── sonar/ # Sonar properties
+├── screenshots/ # Project output screenshots
+├── Jenkinsfile
+└── README.md
+---
+
+## 🧪 How to Run (High Level)
+
+1. Create 4 AWS EC2 Instances
+2. Setup Kubernetes cluster using kubeadm
+3. Install Jenkins, SonarQube, Nexus, Docker
+4. Configure Jenkins credentials
+5. Run Jenkins pipeline
+6. Access application via LoadBalancer
+7. Monitor using Grafana
+
+---
+
+## 📸 Screenshots
+
+Screenshots available inside `/screenshots` folder showing:
+
+- Jenkins Pipeline Success
+- SonarQube Quality Gate
+- Trivy Scan Report
+- DockerHub Image
+- Kubernetes Pods
+- Prometheus Targets
+- Grafana Dashboards
+
+---
+
+## 👨‍💻 Author
+
+**Darshan S P**
+DevSecOps & Cloud Enthusiast
+
+---
+## ⭐ Project Goal
+
+To demonstrate real-time industry level DevSecOps workflow from code commit to monitored production deployment.
+
+---
+
+## 📌 Conclusion
+
+This project simulates a production-grade DevSecOps pipeline implementing automation, security and observability across the software delivery lifecycle.
