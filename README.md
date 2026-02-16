@@ -1,121 +1,117 @@
-# 🚀 Production-Grade DevSecOps CI/CD Pipeline on Kubernetes
+# 🚀 DevSecOps CI/CD Pipeline with Jenkins, SonarQube, Trivy, Nexus, Docker, Kubernetes & Monitoring
 
-This project demonstrates a complete **end-to-end DevSecOps pipeline** used in real companies.
-
-Whenever a developer pushes code, the system automatically:
-
-✔ Builds application
-✔ Runs tests
-✔ Performs code quality analysis
-✔ Runs security scans
-✔ Publishes artifact
-✔ Builds Docker image
-✔ Pushes image to DockerHub
-✔ Deploys to Kubernetes cluster
-✔ Monitors using Prometheus & Grafana
-✔ Sends email notification
-
-No manual intervention required.
+This project demonstrates a complete end-to-end DevSecOps pipeline that automatically builds, tests, scans, packages, deploys and monitors a Spring Boot application using modern DevOps tools.
 
 ---
 
-# 🧱 Tools & Technologies
+## 🧰 Tools & Technologies Used
 
-| Category         | Tools                |
-| ---------------- | -------------------- |
-| Source Control   | GitHub               |
-| CI/CD            | Jenkins              |
-| Build Tool       | Maven + JDK17        |
-| Code Analysis    | SonarQube            |
-| Security Scan    | Trivy                |
-| Artifact Repo    | Nexus                |
-| Containerization | Docker               |
-| Orchestration    | Kubernetes (kubeadm) |
-| Monitoring       | Prometheus + Grafana |
-| Alerts           | Email Notification   |
+- Git & GitHub
+- Jenkins
+- Maven
+- SonarQube
+- Trivy Security Scanner
+- Nexus Repository
+- Docker & DockerHub
+- Kubernetes (AWS EC2 Cluster)
+- Prometheus & Grafana Monitoring
+- Blackbox Exporter & Node Exporter
 
 ---
 
-# 🔄 Pipeline Architecture
+## 🔄 CI/CD Pipeline Flow
 
-Developer → GitHub → Jenkins → SonarQube → Trivy → Nexus → DockerHub → Kubernetes → Monitoring → Email Alert
-
----
-
-# 🏗 Jenkins Pipeline
-
-![pipeline](screenshots/jenkins-stage-view.png)
-
----
-
-# 🔍 SonarQube Quality Gate
-
-![sonarqube](screenshots/sonarqube-quality-gate-passed.png)
+1. Developer pushes code to GitHub
+2. Jenkins triggers pipeline
+3. Maven build & test
+4. SonarQube code quality analysis
+5. Trivy vulnerability scanning
+6. Artifact upload to Nexus
+7. Docker image build & push
+8. Kubernetes deployment
+9. Monitoring via Prometheus & Grafana
+10. Email notification
 
 ---
 
-# 🔐 Security Scan (Trivy)
+## 🧪 Jenkins Pipeline
+
+![pipeline](screenshots/jenkins-pipeline-success.png)
+
+---
+
+## 🔍 SonarQube Quality Gate
+
+![sonarqube](screenshots/sonarqube-dashboard.png)
+
+---
+
+## 🔐 Security Scan (Trivy)
 
 ![trivy](screenshots/trivyscanimage.png)
 
 ---
 
-# 📦 Nexus Artifact Upload
+## 📦 Nexus Artifact Upload
 
-![nexus](screenshots/nexus-artifact-uploaded.png)
+![nexus](screenshots/nexus-repository.png)
 
 ---
 
-# 🐳 Docker Image Build & Push
+## 🐳 Docker Image Build & Push
 
-![docker](screenshots/docker-build.png)
+![docker-build](screenshots/docker-build.png)
+
 ![dockerhub](screenshots/dockerhub-image.png)
 
 ---
 
-# ☸ Kubernetes Deployment
+## ☸ Kubernetes Deployment
 
-![pods](screenshots/kubernetes-pods-running.png)
-![service](screenshots/kubernetes-service.png)
+![k8s-deploy](screenshots/kubernetes-deployment.png)
+
+![k8s-pods](screenshots/kubernetes-pods-running.png)
+
+![k8s-service](screenshots/kubernetes-service.png)
 
 ---
 
-# 📈 Prometheus Monitoring
+## 📊 Monitoring (Prometheus & Grafana)
 
 ![prometheus](screenshots/prometheus-targets-up.png)
 
----
+![grafana-node](screenshots/grafana-node-exporter.png)
 
-# 📊 Grafana Dashboard
-
-![grafana](screenshots/grafana-node-exporter.png)
+![grafana-blackbox](screenshots/grafana-blackbox-exporter.png)
 
 ---
 
-# 📧 Email Notification
+## 📧 Email Notification
 
 ![email](screenshots/jenkins-email-notification.png)
 
 ---
 
-# 🧠 What This Project Demonstrates
+## 🌐 Application Output
 
-• CI/CD automation
-• DevSecOps practices
-• Container orchestration
-• Monitoring & observability
-• Production-like deployment pipeline
+![website](screenshots/website.png)
 
 ---
 
-# 🏁 Final Output
+## 🎯 Project Outcome
 
-A developer pushes code → the system automatically delivers a secure production deployment.
+✔ Automated CI/CD Pipeline  
+✔ Secure code quality checks  
+✔ Vulnerability scanning integrated  
+✔ Containerized deployment  
+✔ Kubernetes orchestration  
+✔ Real-time monitoring & alerting  
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
-**Darshan Patgar**
-Aspiring DevOps & Cloud Engineer
+**Darshan S P**
+
+DevOps | Cloud | Cybersecurity Enthusiast
 
