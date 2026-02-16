@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BoardgameListingWebApp
 
 ## Description 
@@ -51,3 +52,7 @@ This web application displays lists of board games and their reviews. While anyo
   - username: bugs    |     password: bunny (user role)
   - username: daffy   |     password: duck  (manager role)
 5. You can also sign-up as a new user and customize your role to play with the application! 😊
+=======
+# devsecops-cicd-k8s-pipeline
+Production-Grade DevSecOps CI/CD Pipeline using Jenkins, Docker, Kubernetes, SonarQube, Trivy, Nexus and Prometheus-Grafana Monitoring
+>>>>>>> 6629d6c9633789bafb5484d20eb0fbefa0cd650a
