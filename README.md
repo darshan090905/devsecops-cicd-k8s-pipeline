@@ -1,133 +1,121 @@
-# 🚀 DevSecOps CI/CD Pipeline with Kubernetes Monitoring
+# 🚀 Production-Grade DevSecOps CI/CD Pipeline on Kubernetes
 
-A complete end-to-end DevSecOps project demonstrating Continuous Integration, Continuous Delivery, Security Scanning, Containerization, Kubernetes Deployment and Monitoring using industry tools.
+This project demonstrates a complete **end-to-end DevSecOps pipeline** used in real companies.
 
-This project builds a Java Spring Boot application (BoardGame App), scans it for vulnerabilities, containerizes it, pushes it to DockerHub, deploys into Kubernetes and monitors using Prometheus + Grafana + Blackbox Exporter.
+Whenever a developer pushes code, the system automatically:
 
----
+✔ Builds application
+✔ Runs tests
+✔ Performs code quality analysis
+✔ Runs security scans
+✔ Publishes artifact
+✔ Builds Docker image
+✔ Pushes image to DockerHub
+✔ Deploys to Kubernetes cluster
+✔ Monitors using Prometheus & Grafana
+✔ Sends email notification
 
-## 🧠 Project Architecture
-
-Developer → GitHub → Jenkins Pipeline → SonarQube → Trivy → Nexus → DockerHub → Kubernetes → Prometheus → Grafana
-
----
-
-## 🛠️ Tools & Technologies Used
-
-| Category | Tools |
-|--------|------|
-| CI/CD | Jenkins |
-| Build Tool | Maven |
-| Code Quality | SonarQube |
-| Security Scan | Trivy |
-| Artifact Repo | Nexus |
-| Containerization | Docker |
-| Orchestration | Kubernetes (kubeadm cluster) |
-| Monitoring | Prometheus + Grafana |
-| Probing | Blackbox Exporter |
-| Metrics | Node Exporter |
-| Cloud | AWS EC2 |
-| Language | Java (Spring Boot) |
+No manual intervention required.
 
 ---
 
-## ⚙️ Pipeline Stages
+# 🧱 Tools & Technologies
 
-1. Git Checkout
-2. Maven Compile & Test
-3. File System Vulnerability Scan (Trivy)
-4. SonarQube Code Analysis
-5. Quality Gate Validation
-6. Package Build
-7. Publish Artifact to Nexus
-8. Build Docker Image
-9. Docker Image Vulnerability Scan
-10. Push Image to DockerHub
-11. Deploy to Kubernetes
-12. Verify Deployment
-13. Email Notification
-
----
-
-## 🔐 Security Implementations
-
-- Static Code Analysis using SonarQube
-- Dependency Vulnerability Scan using Trivy
-- Container Image Scan using Trivy
-- Kubernetes RBAC Authentication (Jenkins ServiceAccount)
-- Quality Gate enforcement before deployment
+| Category         | Tools                |
+| ---------------- | -------------------- |
+| Source Control   | GitHub               |
+| CI/CD            | Jenkins              |
+| Build Tool       | Maven + JDK17        |
+| Code Analysis    | SonarQube            |
+| Security Scan    | Trivy                |
+| Artifact Repo    | Nexus                |
+| Containerization | Docker               |
+| Orchestration    | Kubernetes (kubeadm) |
+| Monitoring       | Prometheus + Grafana |
+| Alerts           | Email Notification   |
 
 ---
 
-## ☸️ Kubernetes Deployment
+# 🔄 Pipeline Architecture
 
-Application deployed as:
-- Deployment (2 replicas)
-- Service (LoadBalancer / NodePort)
-
-kubectl get pods -n webapps
-kubectl get svc -n webapps
+Developer → GitHub → Jenkins → SonarQube → Trivy → Nexus → DockerHub → Kubernetes → Monitoring → Email Alert
 
 ---
 
-## 📊 Monitoring Setup
+# 🏗 Jenkins Pipeline
 
-| Component | Purpose |
-|--------|------|
-| Node Exporter | Server metrics (CPU, RAM, Disk) |
-| Prometheus | Metrics collection |
-| Grafana | Visualization dashboards |
-| Blackbox Exporter | Endpoint uptime monitoring |
-| Jenkins Metrics | CI/CD monitoring |
+![pipeline](screenshots/jenkins-stage-view.png)
 
 ---
 
-## 📈 Grafana Dashboards
+# 🔍 SonarQube Quality Gate
 
-- Node Exporter Full Dashboard
-- Blackbox HTTP Probe Dashboard
-- Jenkins Metrics Dashboard
+![sonarqube](screenshots/sonarqube-quality-gate-passed.png)
 
 ---
 
-## 🧪 How to Run (High Level)
+# 🔐 Security Scan (Trivy)
 
-1. Create 4 AWS EC2 Instances
-2. Setup Kubernetes cluster using kubeadm
-3. Install Jenkins, SonarQube, Nexus, Docker
-4. Configure Jenkins credentials
-5. Run Jenkins pipeline
-6. Access application via LoadBalancer
-7. Monitor using Grafana
+![trivy](screenshots/trivyscanimage.png)
 
 ---
 
-## 📸 Screenshots
+# 📦 Nexus Artifact Upload
 
-Screenshots available inside `/screenshots` folder showing:
-
-- Jenkins Pipeline Success
-- SonarQube Quality Gate
-- Trivy Scan Report
-- DockerHub Image
-- Kubernetes Pods
-- Prometheus Targets
-- Grafana Dashboards
+![nexus](screenshots/nexus-artifact-uploaded.png)
 
 ---
 
-## 👨‍💻 Author
+# 🐳 Docker Image Build & Push
 
-**Darshan S P**
-DevSecOps & Cloud Enthusiast
-
----
-## ⭐ Project Goal
-
-To demonstrate real-time industry level DevSecOps workflow from code commit to monitored production deployment.
+![docker](screenshots/docker-build.png)
+![dockerhub](screenshots/dockerhub-image.png)
 
 ---
 
-## 📌 Conclusion
+# ☸ Kubernetes Deployment
 
-This project simulates a production-grade DevSecOps pipeline implementing automation, security and observability across the software delivery lifecycle.
+![pods](screenshots/kubernetes-pods-running.png)
+![service](screenshots/kubernetes-service.png)
+
+---
+
+# 📈 Prometheus Monitoring
+
+![prometheus](screenshots/prometheus-targets-up.png)
+
+---
+
+# 📊 Grafana Dashboard
+
+![grafana](screenshots/grafana-node-exporter.png)
+
+---
+
+# 📧 Email Notification
+
+![email](screenshots/jenkins-email-notification.png)
+
+---
+
+# 🧠 What This Project Demonstrates
+
+• CI/CD automation
+• DevSecOps practices
+• Container orchestration
+• Monitoring & observability
+• Production-like deployment pipeline
+
+---
+
+# 🏁 Final Output
+
+A developer pushes code → the system automatically delivers a secure production deployment.
+
+---
+
+# 👨‍💻 Author
+
+**Darshan Patgar**
+Aspiring DevOps & Cloud Engineer
+
